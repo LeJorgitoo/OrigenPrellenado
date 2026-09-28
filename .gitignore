@@ -1,0 +1,9 @@
+# UiPath Studio local machine cache/state (auto-regenerated, machine-specific)
+.local/
+.localasd/
+
+# Build artifacts (if generated)
+[Bb]in/
+[Oo]bj/
+Output/
+*.nupkg

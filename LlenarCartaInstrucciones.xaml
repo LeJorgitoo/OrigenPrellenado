@@ -1,0 +1,931 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="LlenarCartaInstrucciones" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:l="clr-namespace:LibCartaInstrucciones;assembly=LibCartaInstrucciones" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="ConfiguracionRobot" Type="InArgument(l:Configuracion)" />
+  </x:Members>
+  <sap:VirtualizedContainerService.HintSize>1143,8013</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="70">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Activities.System.Compression.Zip</x:String>
+      <x:String>UiPath.Activities.System.Encode</x:String>
+      <x:String>UiPath.Activities.System.Compression.Workflow</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>LibCartaInstrucciones</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="136">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Private.Xml.Linq</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Xml.XPath.XDocument</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>LibCartaInstrucciones</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="LlenarCartaInstrucciones" sap:VirtualizedContainerService.HintSize="1101,7948" sap2010:WorkflowViewState.IdRef="Sequence_26">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="dtPrellenado" />
+      <Variable x:TypeArguments="s:String[]" Name="arrTitulos" />
+      <Variable x:TypeArguments="x:Int32" Name="cont" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1039,92" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Iniciando proceso LlenarCartaInstrucciones.&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1039,92" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Leyendo datos de prellenado.&quot;]" />
+    <ui:ReadRange AddHeaders="True" DataTable="[dtPrellenado]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="1039,88" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Datos" WorkbookPath="[ConfiguracionRobot.RutaPrellenado + &quot;\Prellenado.xlsx&quot;]">
+      <ui:ReadRange.Range>
+        <InArgument x:TypeArguments="x:String">
+          <Literal x:TypeArguments="x:String" Value="" />
+        </InArgument>
+      </ui:ReadRange.Range>
+    </ui:ReadRange>
+    <Assign sap:VirtualizedContainerService.HintSize="1039,82" sap2010:WorkflowViewState.IdRef="Assign_31">
+      <Assign.To>
+        <OutArgument x:TypeArguments="s:String[]">[arrTitulos]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="s:String[]">[{"","","","","",""}]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="1039,7323" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+      <ueab:ExcelProcessScopeX.Body>
+        <ActivityAction x:TypeArguments="ui:IExcelProcess">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1005,7236" sap2010:WorkflowViewState.IdRef="Sequence_27">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="943,92" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Iniciando procesado de las cartas.&quot;]" />
+            <ui:ForEach x:TypeArguments="sd:DataRow" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="943,6414" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[dtPrellenado.AsEnumerable]">
+              <ui:ForEach.Body>
+                <ActivityAction x:TypeArguments="sd:DataRow">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="Carta" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="907,6290" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <If Condition="[Carta(&quot;Status&quot;).ToString = &quot;Pendiente&quot;]" sap:VirtualizedContainerService.HintSize="845,6179" sap2010:WorkflowViewState.IdRef="If_5">
+                      <If.Then>
+                        <Sequence sap:VirtualizedContainerService.HintSize="767,5900" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                          <Sequence.Variables>
+                            <Variable x:TypeArguments="x:Boolean" Name="existe" />
+                          </Sequence.Variables>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:FileExistsX DisplayName="File Exists" Exists="[existe]" sap:VirtualizedContainerService.HintSize="705,133" sap2010:WorkflowViewState.IdRef="FileExistsX_1" Path="[ConfiguracionRobot.RutaPrellenado + &quot;\Carta de Instrucciones.xlsx&quot;]" />
+                          <Assign sap:VirtualizedContainerService.HintSize="705,82" sap2010:WorkflowViewState.IdRef="Assign_17">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:Int32">[cont]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:Int32">0</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="705,92" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Determinando tipo de carta.&quot;]" />
+                          <ui:IfElseIf DisplayName="Else If - Originarias" sap:VirtualizedContainerService.HintSize="705,52" sap2010:WorkflowViewState.IdRef="IfElseIf_3">
+                            <ui:IfElseIf.ConditionBlocks>
+                              <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
+                                <ui:IfElseIfBlock BlockType="If" Condition="[Not(Carta(&quot;Facturas Originarias&quot;).ToString = &quot;&quot;)]">
+                                  <ui:IfElseIfBlock.Then>
+                                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,315" sap2010:WorkflowViewState.IdRef="Sequence_54">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_18">
+                                        <Assign.To>
+                                          <OutArgument x:TypeArguments="x:String">[arrTitulos(cont)]</OutArgument>
+                                        </Assign.To>
+                                        <Assign.Value>
+                                          <InArgument x:TypeArguments="x:String">Originarias</InArgument>
+                                        </Assign.Value>
+                                      </Assign>
+                                      <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_19">
+                                        <Assign.To>
+                                          <OutArgument x:TypeArguments="x:Int32">[cont]</OutArgument>
+                                        </Assign.To>
+                                        <Assign.Value>
+                                          <InArgument x:TypeArguments="x:Int32">[cont + 1]</InArgument>
+                                        </Assign.Value>
+                                      </Assign>
+                                    </Sequence>
+                                  </ui:IfElseIfBlock.Then>
+                                </ui:IfElseIfBlock>
+                              </sc:BindingList>
+                            </ui:IfElseIf.ConditionBlocks>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:IfElseIf>
+                          <ui:IfElseIf DisplayName="Else If - NoOriginarias" sap:VirtualizedContainerService.HintSize="705,52" sap2010:WorkflowViewState.IdRef="IfElseIf_4">
+                            <ui:IfElseIf.ConditionBlocks>
+                              <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
+                                <ui:IfElseIfBlock BlockType="If" Condition="[Not(Carta(&quot;Facturas No Originaria&quot;).ToString = &quot;&quot;)]">
+                                  <ui:IfElseIfBlock.Then>
+                                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,315" sap2010:WorkflowViewState.IdRef="Sequence_55">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_21">
+                                        <Assign.To>
+                                          <OutArgument x:TypeArguments="x:String">[arrTitulos(cont)]</OutArgument>
+                                        </Assign.To>
+                                        <Assign.Value>
+                                          <InArgument x:TypeArguments="x:String">No Originaria</InArgument>
+                                        </Assign.Value>
+                                      </Assign>
+                                      <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_20">
+                                        <Assign.To>
+                                          <OutArgument x:TypeArguments="x:Int32">[cont]</OutArgument>
+                                        </Assign.To>
+                                        <Assign.Value>
+                                          <InArgument x:TypeArguments="x:Int32">[cont + 1]</InArgument>
+                                        </Assign.Value>
+                                      </Assign>
+                                    </Sequence>
+                                  </ui:IfElseIfBlock.Then>
+                                </ui:IfElseIfBlock>
+                              </sc:BindingList>
+                            </ui:IfElseIf.ConditionBlocks>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:IfElseIf>
+                          <ui:IfElseIf DisplayName="Else If - Catalogos" sap:VirtualizedContainerService.HintSize="705,52" sap2010:WorkflowViewState.IdRef="IfElseIf_5">
+                            <ui:IfElseIf.ConditionBlocks>
+                              <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
+                                <ui:IfElseIfBlock BlockType="If" Condition="[Not(Carta(&quot;Facturas Catalogos&quot;).ToString = &quot;&quot;)]">
+                                  <ui:IfElseIfBlock.Then>
+                                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,315" sap2010:WorkflowViewState.IdRef="Sequence_56">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_22">
+                                        <Assign.To>
+                                          <OutArgument x:TypeArguments="x:String">[arrTitulos(cont)]</OutArgument>
+                                        </Assign.To>
+                                        <Assign.Value>
+                                          <InArgument x:TypeArguments="x:String">Catalogos</InArgument>
+                                        </Assign.Value>
+                                      </Assign>
+                                      <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_23">
+                                        <Assign.To>
+                                          <OutArgument x:TypeArguments="x:Int32">[cont]</OutArgument>
+                                        </Assign.To>
+                                        <Assign.Value>
+                                          <InArgument x:TypeArguments="x:Int32">[cont + 1]</InArgument>
+                                        </Assign.Value>
+                                      </Assign>
+                                    </Sequence>
+                                  </ui:IfElseIfBlock.Then>
+                                </ui:IfElseIfBlock>
+                              </sc:BindingList>
+                            </ui:IfElseIf.ConditionBlocks>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:IfElseIf>
+                          <ui:IfElseIf DisplayName="Else If - MiniCatalogos" sap:VirtualizedContainerService.HintSize="705,52" sap2010:WorkflowViewState.IdRef="IfElseIf_6">
+                            <ui:IfElseIf.ConditionBlocks>
+                              <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
+                                <ui:IfElseIfBlock BlockType="If" Condition="[Not(Carta(&quot;Facturas Mini Catalogos&quot;).ToString = &quot;&quot;)]">
+                                  <ui:IfElseIfBlock.Then>
+                                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,315" sap2010:WorkflowViewState.IdRef="Sequence_57">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_24">
+                                        <Assign.To>
+                                          <OutArgument x:TypeArguments="x:String">[arrTitulos(cont)]</OutArgument>
+                                        </Assign.To>
+                                        <Assign.Value>
+                                          <InArgument x:TypeArguments="x:String">Mini Catalogos</InArgument>
+                                        </Assign.Value>
+                                      </Assign>
+                                      <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_25">
+                                        <Assign.To>
+                                          <OutArgument x:TypeArguments="x:Int32">[cont]</OutArgument>
+                                        </Assign.To>
+                                        <Assign.Value>
+                                          <InArgument x:TypeArguments="x:Int32">[cont + 1]</InArgument>
+                                        </Assign.Value>
+                                      </Assign>
+                                    </Sequence>
+                                  </ui:IfElseIfBlock.Then>
+                                </ui:IfElseIfBlock>
+                              </sc:BindingList>
+                            </ui:IfElseIf.ConditionBlocks>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:IfElseIf>
+                          <ui:IfElseIf DisplayName="Else If - Promocional" sap:VirtualizedContainerService.HintSize="705,52" sap2010:WorkflowViewState.IdRef="IfElseIf_7">
+                            <ui:IfElseIf.ConditionBlocks>
+                              <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
+                                <ui:IfElseIfBlock BlockType="If" Condition="[Not(Carta(&quot;Facturas Promocional&quot;).ToString = &quot;&quot;)]">
+                                  <ui:IfElseIfBlock.Then>
+                                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,315" sap2010:WorkflowViewState.IdRef="Sequence_58">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_26">
+                                        <Assign.To>
+                                          <OutArgument x:TypeArguments="x:String">[arrTitulos(cont)]</OutArgument>
+                                        </Assign.To>
+                                        <Assign.Value>
+                                          <InArgument x:TypeArguments="x:String">Promocional</InArgument>
+                                        </Assign.Value>
+                                      </Assign>
+                                      <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_27">
+                                        <Assign.To>
+                                          <OutArgument x:TypeArguments="x:Int32">[cont]</OutArgument>
+                                        </Assign.To>
+                                        <Assign.Value>
+                                          <InArgument x:TypeArguments="x:Int32">[cont + 1]</InArgument>
+                                        </Assign.Value>
+                                      </Assign>
+                                    </Sequence>
+                                  </ui:IfElseIfBlock.Then>
+                                </ui:IfElseIfBlock>
+                              </sc:BindingList>
+                            </ui:IfElseIf.ConditionBlocks>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:IfElseIf>
+                          <ui:IfElseIf DisplayName="Else If - Decorar" sap:VirtualizedContainerService.HintSize="705,52" sap2010:WorkflowViewState.IdRef="IfElseIf_8">
+                            <ui:IfElseIf.ConditionBlocks>
+                              <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
+                                <ui:IfElseIfBlock BlockType="If" Condition="[Not(Carta(&quot;Facturas Decorar&quot;).ToString = &quot;&quot;)]">
+                                  <ui:IfElseIfBlock.Then>
+                                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,315" sap2010:WorkflowViewState.IdRef="Sequence_59">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_28">
+                                        <Assign.To>
+                                          <OutArgument x:TypeArguments="x:String">[arrTitulos(cont)]</OutArgument>
+                                        </Assign.To>
+                                        <Assign.Value>
+                                          <InArgument x:TypeArguments="x:String">Decorar</InArgument>
+                                        </Assign.Value>
+                                      </Assign>
+                                      <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_29">
+                                        <Assign.To>
+                                          <OutArgument x:TypeArguments="x:Int32">[cont]</OutArgument>
+                                        </Assign.To>
+                                        <Assign.Value>
+                                          <InArgument x:TypeArguments="x:Int32">[cont + 1]</InArgument>
+                                        </Assign.Value>
+                                      </Assign>
+                                    </Sequence>
+                                  </ui:IfElseIfBlock.Then>
+                                </ui:IfElseIfBlock>
+                              </sc:BindingList>
+                            </ui:IfElseIf.ConditionBlocks>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:IfElseIf>
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="705,92" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Iniciando procesado y llenado de la carta.&quot;]" />
+                          <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="705,3902" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
+                            <ui:IfElseIf.ConditionBlocks>
+                              <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
+                                <ui:IfElseIfBlock BlockType="If" Condition="[Cont = 1]">
+                                  <ui:IfElseIfBlock.Then>
+                                    <Sequence DisplayName="Body Caso Cont 1" sap:VirtualizedContainerService.HintSize="558,497" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <Sequence sap:VirtualizedContainerService.HintSize="496,386" sap2010:WorkflowViewState.IdRef="Sequence_48">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <ui:CopyFile ContinueOnError="{x:Null}" Destination="[ConfiguracionRobot.RutaPrellenado]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="434,154" sap2010:WorkflowViewState.IdRef="CopyFile_1" Overwrite="True" Path="[ConfiguracionRobot.RutaCartasPlantillas + &quot;\Carta de Instrucciones Uno\Carta de instrucciones.xlsx&quot;]" />
+                                        <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="434,81" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_4" ResizeWindow="None" WorkbookPath="[ConfiguracionRobot.RutaPrellenado + &quot;\Carta de Instrucciones.xlsx&quot;]">
+                                          <ueab:ExcelApplicationCard.Body>
+                                            <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                                              <ActivityAction.Argument>
+                                                <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                                              </ActivityAction.Argument>
+                                              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,81" sap2010:WorkflowViewState.IdRef="Sequence_43">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;B5:H6&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_31" Value="[Carta(&quot;Exportador&quot;).ToString()]" />
+                                                <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;B8:D12&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_33" Value="[Carta(&quot;Consignatario&quot;).ToString]" />
+                                                <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;F8:H9&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_34" Value="[Carta(&quot;Entregar&quot;).ToString]" />
+                                                <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;F10:H12&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_35" Value="[Carta(&quot;Notificar&quot;).ToString]" />
+                                                <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;B14:H14&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_36" Value="[Carta(&quot;Incoterm&quot;).ToString]" />
+                                                <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;A17&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_37" Value="[Carta(&quot;No. Bultos&quot;).ToString]" />
+                                                <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;C17:D17&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_38" Value="[Carta(&quot;Descripción &quot; + arrTitulos(0).ToString).ToString]" />
+                                                <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;E17&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_39" Value="[Carta(&quot;Total Piezas &quot; + arrTitulos(0).ToString).ToString]" />
+                                                <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;F17&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_40" Value="[Carta(&quot;Peso Bruto&quot;).ToString]" />
+                                                <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;G17&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_41" Value="[Carta(&quot;Valor Aduana &quot; + arrTitulos(0).ToString).ToString]" />
+                                                <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;H17&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_42" Value="[Carta(&quot;Facturas &quot; + arrTitulos(0).ToString).ToString]" />
+                                                <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;B28:H28&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_43" Value="[Carta(&quot;Facturas&quot;).ToString]" />
+                                                <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_14">
+                                                  <Assign.To>
+                                                    <OutArgument x:TypeArguments="x:Object">[Carta("Status")]</OutArgument>
+                                                  </Assign.To>
+                                                  <Assign.Value>
+                                                    <InArgument x:TypeArguments="x:Object">["Realizado"]</InArgument>
+                                                  </Assign.Value>
+                                                </Assign>
+                                              </Sequence>
+                                            </ActivityAction>
+                                          </ueab:ExcelApplicationCard.Body>
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </ueab:ExcelApplicationCard>
+                                      </Sequence>
+                                    </Sequence>
+                                  </ui:IfElseIfBlock.Then>
+                                </ui:IfElseIfBlock>
+                                <ui:IfElseIfBlock BlockType="ElseIf" Condition="[Cont  = 2]">
+                                  <ui:IfElseIfBlock.Then>
+                                    <Sequence DisplayName="Body Caso Cont 2" sap:VirtualizedContainerService.HintSize="496,386" sap2010:WorkflowViewState.IdRef="Sequence_41">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ui:CopyFile ContinueOnError="{x:Null}" Destination="[ConfiguracionRobot.RutaPrellenado]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="434,154" sap2010:WorkflowViewState.IdRef="CopyFile_15" Overwrite="True" Path="[ConfiguracionRobot.RutaCartasPlantillas + &quot;\Carta de Instrucciones Dos\Carta de instrucciones.xlsx&quot;]">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </ui:CopyFile>
+                                      <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="434,81" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_5" ResizeWindow="None" WorkbookPath="[ConfiguracionRobot.RutaPrellenado + &quot;\Carta de Instrucciones.xlsx&quot;]">
+                                        <ueab:ExcelApplicationCard.Body>
+                                          <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                                            <ActivityAction.Argument>
+                                              <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                                            </ActivityAction.Argument>
+                                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,3377" sap2010:WorkflowViewState.IdRef="Sequence_46">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;B5:H6&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_44" Value="[Carta(&quot;Exportador&quot;).ToString()]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;B8:D12&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_46" Value="[Carta(&quot;Consignatario&quot;).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;F8:H9&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_47" Value="[Carta(&quot;Entregar&quot;).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;F10:H12&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_48" Value="[Carta(&quot;Notificar&quot;).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;B14:H14&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_49" Value="[Carta(&quot;Incoterm&quot;).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;A17:A18&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_50" Value="[Carta(&quot;No. Bultos&quot;).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;C17:D17&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_51" Value="[Carta(&quot;Descripción &quot; + arrTitulos(0)).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;E17&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_52" Value="[Carta(&quot;Total Piezas &quot; + arrTitulos(0)).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;F17:F18&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_53" Value="[Carta(&quot;Peso Bruto&quot;).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;G17&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_54" Value="[Carta(&quot;Valor Aduana &quot; + arrTitulos(0)).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;H17&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_55" Value="[Carta(&quot;Facturas &quot; + arrTitulos(0)).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;C18:D18&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_56" Value="[Carta(&quot;Descripción &quot; + arrTitulos(1)).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;E18&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_57" Value="[Carta(&quot;Total Piezas &quot; + arrTitulos(1)).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;G18&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_58" Value="[Carta(&quot;Valor Aduana &quot; + arrTitulos(1)).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;H18&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_59" Value="[Carta(&quot;Facturas &quot; + arrTitulos(1)).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;B29:H29&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_60" Value="[Carta(&quot;Facturas&quot;).ToString]" />
+                                              <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_15">
+                                                <Assign.To>
+                                                  <OutArgument x:TypeArguments="x:Object">[Carta("Status")]</OutArgument>
+                                                </Assign.To>
+                                                <Assign.Value>
+                                                  <InArgument x:TypeArguments="x:Object">["Realizado"]</InArgument>
+                                                </Assign.Value>
+                                              </Assign>
+                                            </Sequence>
+                                          </ActivityAction>
+                                        </ueab:ExcelApplicationCard.Body>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </ueab:ExcelApplicationCard>
+                                    </Sequence>
+                                  </ui:IfElseIfBlock.Then>
+                                </ui:IfElseIfBlock>
+                                <ui:IfElseIfBlock BlockType="ElseIf" Condition="[Cont = 3]">
+                                  <ui:IfElseIfBlock.Then>
+                                    <Sequence DisplayName="Body Caso Cont 3" sap:VirtualizedContainerService.HintSize="496,386" sap2010:WorkflowViewState.IdRef="Sequence_60">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ui:CopyFile ContinueOnError="{x:Null}" Destination="[ConfiguracionRobot.RutaPrellenado]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="434,154" sap2010:WorkflowViewState.IdRef="CopyFile_16" Overwrite="True" Path="[ConfiguracionRobot.RutaCartasPlantillas + &quot;\Carta de Instrucciones Tres\Carta de instrucciones.xlsx&quot;]">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </ui:CopyFile>
+                                      <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="434,81" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_7" ResizeWindow="None" WorkbookPath="[ConfiguracionRobot.RutaPrellenado + &quot;\Carta de Instrucciones.xlsx&quot;]">
+                                        <ueab:ExcelApplicationCard.Body>
+                                          <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                                            <ActivityAction.Argument>
+                                              <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                                            </ActivityAction.Argument>
+                                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,81" sap2010:WorkflowViewState.IdRef="Sequence_63">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;B5:H6&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_74" Value="[Carta(&quot;Exportador&quot;).ToString()]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;B8:D12&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_76" Value="[Carta(&quot;Consignatario&quot;).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;F8:H9&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_77" Value="[Carta(&quot;Entregar&quot;).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;F10:H12&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_78" Value="[Carta(&quot;Notificar&quot;).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;B14:H14&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_79" Value="[Carta(&quot;Incoterm&quot;).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;A17:A19&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_80" Value="[Carta(&quot;No. Bultos&quot;).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;C17:D17&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_81" Value="[Carta(&quot;Descripción &quot; + arrTitulos(0)).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;E17&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_82" Value="[Carta(&quot;Total Piezas &quot; + arrTitulos(0)).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;F17:F19&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_83" Value="[Carta(&quot;Peso Bruto&quot;).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;G17&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_84" Value="[Carta(&quot;Valor Aduana &quot; + arrTitulos(0)).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;H17&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_85" Value="[Carta(&quot;Facturas &quot; + arrTitulos(0)).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;C18:D18&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_86" Value="[Carta(&quot;Descripción &quot; + arrTitulos(1)).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;E18&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_87" Value="[Carta(&quot;Total Piezas &quot; + arrTitulos(1)).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;G18&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_88" Value="[Carta(&quot;Valor Aduana &quot; + arrTitulos(1)).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;H18&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_89" Value="[Carta(&quot;Facturas &quot; + arrTitulos(1)).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;C19:D19&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_91" Value="[Carta(&quot;Descripción &quot; + arrTitulos(2)).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;E19&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_92" Value="[Carta(&quot;Total Piezas &quot; + arrTitulos(2)).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;G19&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_93" Value="[Carta(&quot;Valor Aduana &quot; + arrTitulos(2)).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;H19&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_94" Value="[Carta(&quot;Facturas &quot; + arrTitulos(2)).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;B30:H30&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_90" Value="[Carta(&quot;Facturas&quot;).ToString]" />
+                                              <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_30">
+                                                <Assign.To>
+                                                  <OutArgument x:TypeArguments="x:Object">[Carta("Status")]</OutArgument>
+                                                </Assign.To>
+                                                <Assign.Value>
+                                                  <InArgument x:TypeArguments="x:Object">["Realizado"]</InArgument>
+                                                </Assign.Value>
+                                              </Assign>
+                                            </Sequence>
+                                          </ActivityAction>
+                                        </ueab:ExcelApplicationCard.Body>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </ueab:ExcelApplicationCard>
+                                    </Sequence>
+                                  </ui:IfElseIfBlock.Then>
+                                </ui:IfElseIfBlock>
+                                <ui:IfElseIfBlock BlockType="ElseIf" Condition="[Cont = 4]">
+                                  <ui:IfElseIfBlock.Then>
+                                    <Sequence DisplayName="Body Caso Cont 4" sap:VirtualizedContainerService.HintSize="558,766" sap2010:WorkflowViewState.IdRef="Sequence_68">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,655" sap2010:WorkflowViewState.IdRef="Sequence_67">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                        <ui:CopyFile ContinueOnError="{x:Null}" Destination="[ConfiguracionRobot.RutaPrellenado]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="434,154" sap2010:WorkflowViewState.IdRef="CopyFile_17" Overwrite="True" Path="[ConfiguracionRobot.RutaCartasPlantillas + &quot;\Carta de Instrucciones Cuatro\Carta de instrucciones.xlsx&quot;]">
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </ui:CopyFile>
+                                        <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="434,350" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_8" ResizeWindow="None" WorkbookPath="[ConfiguracionRobot.RutaPrellenado + &quot;\Carta de Instrucciones.xlsx&quot;]">
+                                          <ueab:ExcelApplicationCard.Body>
+                                            <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                                              <ActivityAction.Argument>
+                                                <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                                              </ActivityAction.Argument>
+                                              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,81" sap2010:WorkflowViewState.IdRef="Sequence_66">
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                                <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;B5:H6&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_95" Value="[Carta(&quot;Exportador&quot;).ToString()]" />
+                                                <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;B8:D12&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_97" Value="[Carta(&quot;Consignatario&quot;).ToString]" />
+                                                <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;F8:H9&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_98" Value="[Carta(&quot;Entregar&quot;).ToString]" />
+                                                <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;F10:H12&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_99" Value="[Carta(&quot;Notificar&quot;).ToString]" />
+                                                <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;B14:H14&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_100" Value="[Carta(&quot;Incoterm&quot;).ToString]" />
+                                                <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;A17:A20&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_101" Value="[Carta(&quot;No. Bultos&quot;).ToString]" />
+                                                <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;C17:D17&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_102" Value="[Carta(&quot;Descripción &quot; + arrTitulos(0)).ToString]" />
+                                                <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;E17&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_103" Value="[Carta(&quot;Total Piezas &quot; + arrTitulos(0)).ToString]" />
+                                                <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;F17:F20&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_104" Value="[Carta(&quot;Peso Bruto&quot;).ToString]" />
+                                                <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;G17&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_105" Value="[Carta(&quot;Valor Aduana &quot; + arrTitulos(0)).ToString]" />
+                                                <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;H17&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_106" Value="[Carta(&quot;Facturas &quot; + arrTitulos(0)).ToString]" />
+                                                <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;C18:D18&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_107" Value="[Carta(&quot;Descripción &quot; + arrTitulos(1)).ToString]" />
+                                                <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;E18&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_108" Value="[Carta(&quot;Total Piezas &quot; + arrTitulos(1)).ToString]" />
+                                                <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;G18&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_109" Value="[Carta(&quot;Valor Aduana &quot; + arrTitulos(1)).ToString]" />
+                                                <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;H18&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_110" Value="[Carta(&quot;Facturas &quot; + arrTitulos(1)).ToString]" />
+                                                <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;C19:D19&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_111" Value="[Carta(&quot;Descripción &quot; + arrTitulos(2)).ToString]" />
+                                                <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;E19&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_112" Value="[Carta(&quot;Total Piezas &quot; + arrTitulos(2)).ToString]" />
+                                                <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;G19&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_113" Value="[Carta(&quot;Valor Aduana &quot; + arrTitulos(2)).ToString]" />
+                                                <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;H19&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_114" Value="[Carta(&quot;Facturas &quot; + arrTitulos(2)).ToString]" />
+                                                <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;C19:D19&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_116" Value="[Carta(&quot;Descripción &quot; + arrTitulos(2)).ToString]" />
+                                                <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;E20&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_117" Value="[Carta(&quot;Total Piezas &quot; + arrTitulos(3)).ToString]" />
+                                                <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;G20&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_118" Value="[Carta(&quot;Valor Aduana &quot; + arrTitulos(3)).ToString]" />
+                                                <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;H20&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_119" Value="[Carta(&quot;Facturas &quot; + arrTitulos(3)).ToString]" />
+                                                <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;B31:H31&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_115" Value="[Carta(&quot;Facturas&quot;).ToString]" />
+                                                <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_32">
+                                                  <Assign.To>
+                                                    <OutArgument x:TypeArguments="x:Object">[Carta("Status")]</OutArgument>
+                                                  </Assign.To>
+                                                  <Assign.Value>
+                                                    <InArgument x:TypeArguments="x:Object">["Realizado"]</InArgument>
+                                                  </Assign.Value>
+                                                </Assign>
+                                              </Sequence>
+                                            </ActivityAction>
+                                          </ueab:ExcelApplicationCard.Body>
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </ueab:ExcelApplicationCard>
+                                      </Sequence>
+                                    </Sequence>
+                                  </ui:IfElseIfBlock.Then>
+                                </ui:IfElseIfBlock>
+                                <ui:IfElseIfBlock BlockType="ElseIf" Condition="[Cont = 5]">
+                                  <ui:IfElseIfBlock.Then>
+                                    <Sequence DisplayName="Body Caso Cont 5" sap:VirtualizedContainerService.HintSize="496,655" sap2010:WorkflowViewState.IdRef="Sequence_72">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ui:CopyFile ContinueOnError="{x:Null}" Destination="[ConfiguracionRobot.RutaPrellenado]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="434,154" sap2010:WorkflowViewState.IdRef="CopyFile_18" Overwrite="True" Path="[ConfiguracionRobot.RutaCartasPlantillas + &quot;\Carta de Instrucciones Cinco\Carta de instrucciones.xlsx&quot;]">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </ui:CopyFile>
+                                      <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="434,350" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_9" ResizeWindow="None" WorkbookPath="[ConfiguracionRobot.RutaPrellenado + &quot;\Carta de Instrucciones.xlsx&quot;]">
+                                        <ueab:ExcelApplicationCard.Body>
+                                          <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                                            <ActivityAction.Argument>
+                                              <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                                            </ActivityAction.Argument>
+                                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,81" sap2010:WorkflowViewState.IdRef="Sequence_71">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;B5:H6&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_120" Value="[Carta(&quot;Exportador&quot;).ToString()]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;B8:D12&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_122" Value="[Carta(&quot;Consignatario&quot;).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;F8:H9&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_123" Value="[Carta(&quot;Entregar&quot;).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;F10:H12&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_124" Value="[Carta(&quot;Notificar&quot;).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;B14:H14&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_125" Value="[Carta(&quot;Incoterm&quot;).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;A17:A20&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_126" Value="[Carta(&quot;No. Bultos&quot;).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;C17:D17&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_127" Value="[Carta(&quot;Descripción &quot; + arrTitulos(0)).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;E17&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_128" Value="[Carta(&quot;Total Piezas &quot; + arrTitulos(0)).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;F17:F20&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_129" Value="[Carta(&quot;Peso Bruto&quot;).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;G17&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_130" Value="[Carta(&quot;Valor Aduana &quot; + arrTitulos(0)).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;H17&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_131" Value="[Carta(&quot;Facturas &quot; + arrTitulos(0)).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;C18:D18&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_132" Value="[Carta(&quot;Descripción &quot; + arrTitulos(1)).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;E18&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_133" Value="[Carta(&quot;Total Piezas &quot; + arrTitulos(1)).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;G18&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_134" Value="[Carta(&quot;Valor Aduana &quot; + arrTitulos(1)).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;H18&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_135" Value="[Carta(&quot;Facturas &quot; + arrTitulos(1)).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;C19:D19&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_136" Value="[Carta(&quot;Descripción &quot; + arrTitulos(2)).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;E19&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_137" Value="[Carta(&quot;Total Piezas &quot; + arrTitulos(2)).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;G19&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_138" Value="[Carta(&quot;Valor Aduana &quot; + arrTitulos(2)).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;H19&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_139" Value="[Carta(&quot;Facturas &quot; + arrTitulos(2)).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;C20:D20&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_140" Value="[Carta(&quot;Descripción &quot; + arrTitulos(3)).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;E20&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_141" Value="[Carta(&quot;Total Piezas &quot; + arrTitulos(3)).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;G20&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_142" Value="[Carta(&quot;Valor Aduana &quot; + arrTitulos(3)).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;H20&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_143" Value="[Carta(&quot;Facturas &quot; + arrTitulos(3)).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;C21:D21&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_145" Value="[Carta(&quot;Descripción &quot; + arrTitulos(4)).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;E21&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_146" Value="[Carta(&quot;Total Piezas &quot; + arrTitulos(4)).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;G21&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_147" Value="[Carta(&quot;Valor Aduana &quot; + arrTitulos(4)).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;H21&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_148" Value="[Carta(&quot;Facturas &quot; + arrTitulos(4)).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;B32:H32&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_144" Value="[Carta(&quot;Facturas&quot;).ToString]" />
+                                              <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_33">
+                                                <Assign.To>
+                                                  <OutArgument x:TypeArguments="x:Object">[Carta("Status")]</OutArgument>
+                                                </Assign.To>
+                                                <Assign.Value>
+                                                  <InArgument x:TypeArguments="x:Object">["Realizado"]</InArgument>
+                                                </Assign.Value>
+                                              </Assign>
+                                            </Sequence>
+                                          </ActivityAction>
+                                        </ueab:ExcelApplicationCard.Body>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </ueab:ExcelApplicationCard>
+                                    </Sequence>
+                                  </ui:IfElseIfBlock.Then>
+                                </ui:IfElseIfBlock>
+                                <ui:IfElseIfBlock BlockType="ElseIf" Condition="[Cont = 6]">
+                                  <ui:IfElseIfBlock.Then>
+                                    <Sequence DisplayName="Body Caso Cont 6" sap:VirtualizedContainerService.HintSize="496,386" sap2010:WorkflowViewState.IdRef="Sequence_76">
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                      <ui:CopyFile ContinueOnError="{x:Null}" Destination="[ConfiguracionRobot.RutaPrellenado]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="434,154" sap2010:WorkflowViewState.IdRef="CopyFile_19" Overwrite="True" Path="[ConfiguracionRobot.RutaCartasPlantillas + &quot;\Carta de Instrucciones Seis\Carta de instrucciones.xlsx&quot;]">
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </ui:CopyFile>
+                                      <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="434,81" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_10" ResizeWindow="None" WorkbookPath="[ConfiguracionRobot.RutaPrellenado + &quot;\Carta de Instrucciones.xlsx&quot;]">
+                                        <ueab:ExcelApplicationCard.Body>
+                                          <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                                            <ActivityAction.Argument>
+                                              <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                                            </ActivityAction.Argument>
+                                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,81" sap2010:WorkflowViewState.IdRef="Sequence_75">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;B5:H6&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_149" Value="[Carta(&quot;Exportador&quot;).ToString()]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;B8:D12&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_151" Value="[Carta(&quot;Consignatario&quot;).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;F8:H9&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_152" Value="[Carta(&quot;Entregar&quot;).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;F10:H12&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_153" Value="[Carta(&quot;Notificar&quot;).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;B14:H14&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_154" Value="[Carta(&quot;Incoterm&quot;).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;A17:A22&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_155" Value="[Carta(&quot;No. Bultos&quot;).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;C17:D17&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_156" Value="[Carta(&quot;Descripción &quot; + arrTitulos(0)).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;E17&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_157" Value="[Carta(&quot;Total Piezas &quot; + arrTitulos(0)).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;F17:F22&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_158" Value="[Carta(&quot;Peso Bruto&quot;).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;G17&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_159" Value="[Carta(&quot;Valor Aduana &quot; + arrTitulos(0)).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;H17&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_160" Value="[Carta(&quot;Facturas &quot; + arrTitulos(0)).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;C18:D18&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_161" Value="[Carta(&quot;Descripción &quot; + arrTitulos(1)).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;E18&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_162" Value="[Carta(&quot;Total Piezas &quot; + arrTitulos(1)).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;G18&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_163" Value="[Carta(&quot;Valor Aduana &quot; + arrTitulos(1)).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;H18&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_164" Value="[Carta(&quot;Facturas &quot; + arrTitulos(1)).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;C19:D19&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_165" Value="[Carta(&quot;Descripción &quot; + arrTitulos(2)).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;E19&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_166" Value="[Carta(&quot;Total Piezas &quot; + arrTitulos(2)).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;G19&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_167" Value="[Carta(&quot;Valor Aduana &quot; + arrTitulos(2)).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;H19&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_168" Value="[Carta(&quot;Facturas &quot; + arrTitulos(2)).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;C20:D20&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_169" Value="[Carta(&quot;Descripción &quot; + arrTitulos(3)).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;E20&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_170" Value="[Carta(&quot;Total Piezas &quot; + arrTitulos(3)).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;G20&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_171" Value="[Carta(&quot;Valor Aduana &quot; + arrTitulos(3)).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;H20&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_172" Value="[Carta(&quot;Facturas &quot; + arrTitulos(3)).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;C21:D21&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_173" Value="[Carta(&quot;Descripción &quot; + arrTitulos(4)).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;E21&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_174" Value="[Carta(&quot;Total Piezas &quot; + arrTitulos(4)).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;G21&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_175" Value="[Carta(&quot;Valor Aduana &quot; + arrTitulos(4)).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;H21&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_176" Value="[Carta(&quot;Facturas &quot; + arrTitulos(4)).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;C22:D22&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_177" Value="[Carta(&quot;Descripción &quot; + arrTitulos(5)).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;E22&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_178" Value="[Carta(&quot;Total Piezas &quot; + arrTitulos(5)).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;G22&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_179" Value="[Carta(&quot;Valor Aduana &quot; + arrTitulos(5)).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;H22&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_180" Value="[Carta(&quot;Facturas &quot; + arrTitulos(5)).ToString]" />
+                                              <ueab:WriteCellX Cell="[Excel.Sheet(&quot;FORMATO&quot;).Cell(&quot;B33:H33&quot;)]" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteCellX_181" Value="[Carta(&quot;Facturas&quot;).ToString]" />
+                                              <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_34">
+                                                <Assign.To>
+                                                  <OutArgument x:TypeArguments="x:Object">[Carta("Status")]</OutArgument>
+                                                </Assign.To>
+                                                <Assign.Value>
+                                                  <InArgument x:TypeArguments="x:Object">["Realizado"]</InArgument>
+                                                </Assign.Value>
+                                              </Assign>
+                                            </Sequence>
+                                          </ActivityAction>
+                                        </ueab:ExcelApplicationCard.Body>
+                                        <sap:WorkflowViewStateService.ViewState>
+                                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                          </scg:Dictionary>
+                                        </sap:WorkflowViewStateService.ViewState>
+                                      </ueab:ExcelApplicationCard>
+                                    </Sequence>
+                                  </ui:IfElseIfBlock.Then>
+                                </ui:IfElseIfBlock>
+                              </sc:BindingList>
+                            </ui:IfElseIf.ConditionBlocks>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:IfElseIf>
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="705,92" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[&quot;Moviendo carta terminada a la carpeta contenedora.&quot;]" />
+                          <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[ConfiguracionRobot.RutaCartasSalida]" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="705,159" sap2010:WorkflowViewState.IdRef="MoveFile_1" Path="[ConfiguracionRobot.RutaPrellenado + &quot;\Carta de Instrucciones.xlsx&quot;]" />
+                          <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="705,90" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="705,92" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Info" Message="[&quot;Renombrando carta.&quot;]" />
+                          <ui:RenameFileX DisplayName="Rename File" FilePath="[ConfiguracionRobot.RutaCartasSalida + &quot;\Carta de instrucciones.xlsx&quot;]" sap:VirtualizedContainerService.HintSize="705,143" sap2010:WorkflowViewState.IdRef="RenameFileX_1" KeepExtension="True" NewName="[&quot;Carta de instrucciones &quot; + Carta(&quot;Número de exportación&quot;).ToString]" />
+                        </Sequence>
+                      </If.Then>
+                      <If.Else>
+                        <Sequence sap:VirtualizedContainerService.HintSize="400,103" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </Sequence>
+                      </If.Else>
+                    </If>
+                  </Sequence>
+                </ActivityAction>
+              </ui:ForEach.Body>
+            </ui:ForEach>
+            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="943,539" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" ResizeWindow="None" WorkbookPath="[ConfiguracionRobot.RutaPrellenado + &quot;\Prellenado.xlsx&quot;]">
+              <ueab:ExcelApplicationCard.Body>
+                <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,270" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ueab:WriteRangeX Destination="[Excel.Table(&quot;Tabla1&quot;)]" DisplayName="Write DataTable to Excel" ExcludeHeaders="True" sap:VirtualizedContainerService.HintSize="434,159" sap2010:WorkflowViewState.IdRef="WriteRangeX_2" IgnoreEmptySource="False" Source="[dtPrellenado]" />
+                  </Sequence>
+                </ActivityAction>
+              </ueab:ExcelApplicationCard.Body>
+            </ueab:ExcelApplicationCard>
+          </Sequence>
+        </ActivityAction>
+      </ueab:ExcelProcessScopeX.Body>
+    </ueab:ExcelProcessScopeX>
+  </Sequence>
+</Activity>
