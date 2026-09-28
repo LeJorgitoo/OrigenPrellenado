@@ -584,7 +584,7 @@
                 </Assign.To>
                 <Assign.Value>
                   <InArgument x:TypeArguments="s:Int32[]" xml:space="preserve">[(From row In dtFactura.AsEnumerable() Join origen In dtCatalogoOrigen.AsEnumerable()
-On row("NoIdentificacion") Equals origen("Column1")
+On row("NoIdentificacion") Equals origen("MODELO CN EC")
 Select CInt(row("rowNumber"))).ToArray()]</InArgument>
                 </Assign.Value>
               </Assign>
@@ -633,7 +633,7 @@ Not(arrCuentasEnCat.Contains(CInt(row("rowNumber")))) ).ToArray()]</InArgument>
                 <Assign.Value>
                   <InArgument x:TypeArguments="sd:DataRow[]" xml:space="preserve">[(From row In dtFactura.AsEnumerable
 Join origen In dtCatalogoOrigen.AsEnumerable
-On row("NoIdentificacion") Equals origen("Column1")
+On row("NoIdentificacion") Equals origen("MODELO CN EC")
 Select dtFacturaClone.LoadDataRow({
 	row("..."),
 	row("Folio"),
