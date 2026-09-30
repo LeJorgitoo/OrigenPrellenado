@@ -317,7 +317,7 @@
                         <ui:ExcelReadRange AddHeaders="True" DataTable="[dtJuegos]" DisplayName="Read Range - JUEGOS (piezas por juego)" sap:VirtualizedContainerService.HintSize="416,83" sap2010:WorkflowViewState.IdRef="ExcelReadRange_Juegos" SheetName="JUEGOS">
                           <ui:ExcelReadRange.Range>
                             <InArgument x:TypeArguments="x:String">
-                              <Literal x:TypeArguments="x:String" Value="" />
+                              <Literal x:TypeArguments="x:String" Value="A1:AC1000" />
                             </InArgument>
                           </ui:ExcelReadRange.Range>
                         </ui:ExcelReadRange>
