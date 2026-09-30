@@ -182,7 +182,7 @@
         <InArgument x:TypeArguments="x:Int32">0</InArgument>
       </Assign.Value>
     </Assign>
-    <Assign sap:VirtualizedContainerService.HintSize="1041,175" sap2010:WorkflowViewState.IdRef="Assign_PiezasOriginarioInit">
+    <Assign DisplayName="Assign - Agregado Por Claude" sap:VirtualizedContainerService.HintSize="1041,175" sap2010:WorkflowViewState.IdRef="Assign_PiezasOriginarioInit">
       <Assign.To>
         <OutArgument x:TypeArguments="x:Int32">[PiezasFacturaOriginario]</OutArgument>
       </Assign.To>
@@ -190,7 +190,7 @@
         <InArgument x:TypeArguments="x:Int32">0</InArgument>
       </Assign.Value>
     </Assign>
-    <Assign sap:VirtualizedContainerService.HintSize="1041,175" sap2010:WorkflowViewState.IdRef="Assign_PiezasNoOriginarioInit">
+    <Assign DisplayName="Assign - Agregado Por Claude" sap:VirtualizedContainerService.HintSize="1041,175" sap2010:WorkflowViewState.IdRef="Assign_PiezasNoOriginarioInit">
       <Assign.To>
         <OutArgument x:TypeArguments="x:Int32">[PiezasFacturaNoOriginario]</OutArgument>
       </Assign.To>
@@ -314,7 +314,7 @@
                             </InArgument>
                           </ui:ExcelReadRange.Range>
                         </ui:ExcelReadRange>
-                        <ui:ExcelReadRange AddHeaders="True" DataTable="[dtJuegos]" DisplayName="Read Range - JUEGOS (piezas por juego)" sap:VirtualizedContainerService.HintSize="416,83" sap2010:WorkflowViewState.IdRef="ExcelReadRange_Juegos" SheetName="JUEGOS">
+                        <ui:ExcelReadRange AddHeaders="True" DataTable="[dtJuegos]" DisplayName="Read Range - JUEGOS (piezas por juego) - Agregado Por Claude" sap:VirtualizedContainerService.HintSize="416,83" sap2010:WorkflowViewState.IdRef="ExcelReadRange_Juegos" SheetName="JUEGOS">
                           <ui:ExcelReadRange.Range>
                             <InArgument x:TypeArguments="x:String">
                               <Literal x:TypeArguments="x:String" Value="A1:AC1000" />
@@ -549,7 +549,7 @@
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Assign sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="Assign_NodoMercancia">
+                      <Assign DisplayName="Assign - Agregado Por Claude" sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="Assign_NodoMercancia">
                         <Assign.To>
                           <OutArgument x:TypeArguments="sxl:XElement">[nodoMercancia]</OutArgument>
                         </Assign.To>
@@ -825,7 +825,7 @@ Select dtFacturaClone.LoadDataRow({
                                                   <InArgument x:TypeArguments="x:Int32">[ValorFacturaOriginario + CINT(row("Importe"))]</InArgument>
                                                 </Assign.Value>
                                               </Assign>
-                                              <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_PiezasOriginario">
+                                              <Assign DisplayName="Assign - Agregado Por Claude" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_PiezasOriginario">
                                                 <Assign.To>
                                                   <OutArgument x:TypeArguments="x:Int32">[PiezasFacturaOriginario]</OutArgument>
                                                 </Assign.To>
@@ -852,7 +852,7 @@ Select dtFacturaClone.LoadDataRow({
                                                   <InArgument x:TypeArguments="x:Int32">[ValorFacturaNoOriginario + CINT(row("Importe"))]</InArgument>
                                                 </Assign.Value>
                                               </Assign>
-                                              <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_PiezasNoOriginario">
+                                              <Assign DisplayName="Assign - Agregado Por Claude" sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_PiezasNoOriginario">
                                                 <Assign.To>
                                                   <OutArgument x:TypeArguments="x:Int32">[PiezasFacturaNoOriginario]</OutArgument>
                                                 </Assign.To>
