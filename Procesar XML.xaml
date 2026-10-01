@@ -686,7 +686,7 @@ Select dtFacturaClone.LoadDataRow({
 	origen("Origen"),
 	origen("Precio"),
 	origen("Partida"),
-	"",
+	origen("Partida"),
 	juegosMult.ToString,
 	(CINT(row("Cantidad")) * juegosMult).ToString
 	},False )).ToArray()]</InArgument>
